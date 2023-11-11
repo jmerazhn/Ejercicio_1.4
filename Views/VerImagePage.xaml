@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio_1._4.Views.VerImagePage" xmlns:Convertidor="clr-namespace:Ejercicio_1._4.Converters"
+             Title="VerImagePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Convertidor:ByteArrayToImage x:Key="ByteToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="img"  HeightRequest="300" WidthRequest="100" VerticalOptions="CenterAndExpand" BackgroundColor="Azure" Margin="20,0,20,0" Source="{Binding imagen, Converter={StaticResource ByteToImage}}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

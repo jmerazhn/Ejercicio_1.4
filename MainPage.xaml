@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio_1._4.MainPage" xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+
+                <Image x:Name="img"  HeightRequest="260" WidthRequest="100" BackgroundColor="Azure" Margin="20,0,20,0" Source="{Binding imagen, Converter={StaticResource ByteToImage}}"/>
+
+                <Entry x:Name="txtnombre" Placeholder="Nombre" Margin="30,0,30,0" FontSize="Subtitle" Text="{Binding nombres}"/>
+                <Entry x:Name="txtdescripcion" Placeholder="Descripcion" Margin="30,0,30,0" FontSize="Subtitle" Text="{Binding descripcion}"/>
+
+                <Button Text="Tomar Foto" x:Name="btnFoto" Clicked="btnFoto_Clicked" Margin="20,10,20,0" WidthRequest="590" CornerRadius="20" HorizontalOptions="Center" TextColor="BlanchedAlmond" BackgroundColor="IndianRed"/>
+                <Button Text="a SQlite" x:Name="btnSQlite" Clicked="btnSQlite_Clicked" Margin="20,10,20,0" WidthRequest="590" CornerRadius="20" HorizontalOptions="Center" TextColor="BlanchedAlmond" BackgroundColor="IndianRed" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
